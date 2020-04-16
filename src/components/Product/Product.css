@@ -1,0 +1,11 @@
+.product-container{
+    display: flex;
+}
+.product_des{
+    padding-left: 50px;
+    margin-bottom: 50px;
+}
+.main-btn{
+    padding: 4px 8px;
+    border: 1px solid gray;
+}

@@ -12,10 +12,14 @@ import Review from './components/Review/Review';
 import Inventory from './components/Inventory/Inventory';
 import NoMatch from './components/NoMatch/NoMatch';
 import ProductDetails from './components/ProductDetails/ProductDetails';
+import Login from './components/Login/Login';
+import {AuthContextProvider, PrivateRoute} from './components/Login/UseAuth'
+import Shipment from './components/Shipment/Shipment';
 
 function App() {
   return (
     <div>
+      <AuthContextProvider>
         <Header></Header>
         <Router>
           <Switch>
@@ -34,11 +38,18 @@ function App() {
             <Route path = "/product/:productKey">
               <ProductDetails></ProductDetails>
             </Route>
+            <Route path = "/login">
+              <Login></Login>
+            </Route>
+            <PrivateRoute path = "/shipment">
+              <Shipment></Shipment>
+            </PrivateRoute>
             <Route path = "*">
               <NoMatch></NoMatch>
             </Route>
           </Switch>
         </Router>
+      </AuthContextProvider>
     </div>
   );
 }

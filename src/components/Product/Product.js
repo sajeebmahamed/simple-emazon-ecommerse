@@ -6,7 +6,6 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 
 const Product = (props) => {
-    console.log(props);
     const { name, img, seller, stock, price, key } = props.product;
     return (
         <Container>

@@ -1,8 +1,10 @@
 import React from 'react';
 import { Container, Row, Col} from 'react-bootstrap';
+import { useAuth } from '../Login/UseAuth';
 const Cart = (props) => {
     const cart = props.cart;
-    console.log(cart);
+    const auth = useAuth();
+    console.log(auth);
     const total = cart.reduce((total, prd) => total + prd.price * prd.quantity , 0);
     let shipping = 0;
     if(total> 200){

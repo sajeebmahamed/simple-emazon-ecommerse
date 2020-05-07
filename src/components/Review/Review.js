@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { getDatabaseCart, removeFromDatabaseCart, processOrder } from '../../utilities/databaseManager';
+import { getDatabaseCart, removeFromDatabaseCart } from '../../utilities/databaseManager';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import Cart from '../Cart/Cart';
 import { Container, Row, Col, Button } from 'react-bootstrap';
@@ -27,7 +27,7 @@ const Review = () => {
     useEffect(() =>{
         const savedCart = getDatabaseCart();
         const productKeys = Object.keys(savedCart);
-        fetch('http://localhost:4200/getProductsByKey', {
+        fetch('https://emazon-simple.herokuapp.com/getProductsByKey', {
             method : 'POST',
             headers:{
                 'Content-Type' : 'application/json'

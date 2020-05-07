@@ -4,7 +4,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 const Inventory = () => {
     const addInventor = () => {
         // // const product = fakeData;
-        // fetch('http://localhost:4200/addProduct', {
+        // fetch('https://emazon-simple.herokuapp.com/addProduct', {
         //     method : 'POST',
         //     headers : {
         //         'Content-Type' : 'application/json'
